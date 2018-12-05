@@ -119,7 +119,7 @@ if __name__=='__main__':
     if os.path.exists(os.path.join(ckpt_dir,'ckpt.7')):
         print('Loading ...')
         loading=torch.load(os.path.join(ckpt_dir,'ckpt.7'))
-        net=loading['net']
+        net.load_state_dict(loading['net'])
         best_acc=loading['acc']
 
     train(1,best_acc)
