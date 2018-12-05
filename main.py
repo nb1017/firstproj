@@ -122,6 +122,6 @@ if __name__=='__main__':
         net.load_state_dict(loading['net'])
         best_acc=loading['acc']
 
-    train(1,best_acc)
+    train(50,best_acc)
     test()
     writer.close()
